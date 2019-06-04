@@ -29,3 +29,28 @@ set2 = {'x', 10, 'a', 'A'}
 
 for e in set2:
     print(e)
+
+""" A list is mutable, so we can reassign elements. Thus,
+l[0] = 100
+------> l == [100, 2, 3] is true
+tuples are immutable, so we could not say:
+t[0] = 100
+In other words, the memory address of the object can't be changed.
+We can alter things with a mutable object within them...
+"""
+
+t2 = ([1, 2], 3,4 )
+
+"""
+t[0] = [1, 2, 3] will not work.
+But, this will work:"""
+
+t2[0][0] = 100
+
+""" most sequence types handle the 'in' and 'not in' operators
+"""
+
+'a' in ['a', 'b', 100] # True
+
+100 in range(200) # True
+
