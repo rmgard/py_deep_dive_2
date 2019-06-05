@@ -54,3 +54,46 @@ t2[0][0] = 100
 
 100 in range(200) # True
 
+len('python'), len([1, 2, 3]), len({10, 20, 30}), len({'a': 1, 'b':2})
+
+l = [100, 90, 20]
+min(l)
+max(l) 
+#min() and max() can't be used on complex numbers... Strings can be supported with inequalities.
+
+# CAT
+(1,2,3) + (4,5,6)
+list('abc') +['d', 'e', 'f']
+
+'***'.join(['1', '2', '3'])
+','.join(['1', '2', '3'])
+''.join(['1', '2', '3'])
+
+###################################################################
+# enumerate
+
+s = "gnu's not unix"
+
+list(enumerate(s))
+s.index('n')
+s.index('n', 2)
+s.index('n', 1)
+s.index('n', 7)
+
+
+##################################################################
+# slicing
+s = 'python'
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+s[1:4]
+list(enumerate(s))
+l[0:5]
+s[4:1000]
+s[:4]
+s[4:]
+s[:]
+s[5:0:-1]
+s[::-1]
+
+
