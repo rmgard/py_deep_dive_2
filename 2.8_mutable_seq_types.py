@@ -73,3 +73,65 @@ def extend_list(some_list):
     print(f"extending some_list with a multi-element iterable: {some_list}")
     return "done"
 
+
+# We can use extend() with sets, but order is not guaranteed
+
+def pop_list(some_list, index=None):
+    """ the default is to pop the last item. We can set the member in the
+    list that we want to pop which will remove it, and show us the number
+    popped"""
+    if index is None:
+        return some_list.pop()
+    return some_list.pop(index)
+
+
+def delete_element(some_list, index):
+    """ Delete removes similarly to pop, but does not show the element
+    that has just been removed"""
+    del some_list[index]
+    return some_list
+
+
+def insert_element(some_list, index, new_el):
+    """ Inserts a new element at the specified index
+    param: some_list: a list to manipulate
+    param: index: the location of where we will place the new element
+    param: new_el: the new element to be installed """
+    return some_list.insert(index, new_el)
+
+
+def mirror_world(some_list):
+    """ This function will just reverse our input list. The reversed
+    list is at a different memory address"""
+    l = some_list[::-1]
+    print(f"Our original list: {some_list}")
+    print(f"Our original list location: {id(some_list)}")
+    print(f"Our new list: {l}")
+    print(f"Our new list location: {id(l)}")
+    return "done!"
+
+
+def reverse_object_list(some_list):
+    """ This function will just reverse our input list. The reversed
+    list is at the same memory address"""
+    print(f"Our original list: {some_list}")
+    print(f"Our original list location: {id(some_list)}")
+    some_list.reverse()
+    print(f"Our new list: {some_list}")
+    print(f"Our new list location: {id(some_list)}")
+    return "done!"
+
+
+def copy_two_ways(some_list):
+    """ this function provides two ways of copying a list, with
+    both copies stored in new locations (memory addresses)"""
+    cp1 = some_list[:]
+    cp2 = some_list.copy()
+    print(f"our input list: {some_list}")
+    print(f"our slice copied list (list[:]): {cp1}")
+    print(f"our copied list (.copy()): {cp2}")
+    print(f"our input list location: {id(some_list)}")
+    print(f"our slice copied list (list[:]) location: {id(cp1)}")
+    print(f"our copied list (.copy()) location: {id(cp2)}")
+    return "done!"
+    
